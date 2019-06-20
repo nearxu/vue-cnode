@@ -46,3 +46,22 @@ cnpm i postcss-px2rem lib-flexible
 ### fileheader
 
 ctrl + alt + i
+
+###
+
+create axios vue
+
+### eslint abouot some rule from 
+
+https://zhuanlan.zhihu.com/p/28906725
+
+### keep-alive
+
+根据 $route.meta.keepAlive 属性 进行 v-if 判断
+
+### 登录校验路由
+router.beforeForeach((to,from,next))
+
+### some need to do 
+
+transition 动画 tab 组件 dropmenu 下拉刷新

@@ -1,42 +1,23 @@
-/*
- * @Author: nearxu 
- * @Date: 2019-06-19 18:27:53 
- * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-06-19 18:55:30
- */
 
  <template>
   <div class="head">
     <div :class="['vheader', { showAnimate: show }]">
-      <div class="left" v-show="showMenuButton" @click="showMenu">
-        <i class="cnode-iconfont">menu</i>
-      </div>
-      <div class="left" v-show="showBackButton" @click="handleBackButton">
-        <i class="cnode-iconfont">back</i>
-      </div>
-      <div
-        class="left"
-        v-show="showMenuButton == false && showBackButton == false"
-        @click="showMenu"
-      >
-        <i class="cnode-iconfont">menu</i>
+      <div class="left" @click="handleBackButton">
+        <i v-show="showBackButton" class="cnode-iconfont">back</i>
       </div>
       <div class="center">
         <span class="text" v-text="title"></span>
       </div>
-      <div class="right" v-show="showPostButton" @click="goPost">
-        <i class="cnode-iconfont">post</i>
-      </div>
-      <div class="right" v-show="!showPostButton">
-        <i class="cnode-iconfont"></i>
+      <div class="right" @click="goPost">
+        <i v-show="showPostButton" class="cnode-iconfont">post</i>
       </div>
     </div>
   </div>
 </template>
- 
- <script>
+
+<script>
 export default {
-  name: 'header',
+  name: 'headers',
   props: {
     showMenuButton: {
       type: Boolean,
@@ -52,11 +33,15 @@ export default {
     },
     handleMenuButton: {
       type: Function,
-      default: () => { return; }
+      default: () => {
+        return
+      }
     },
     handlePostButton: {
       type: Function,
-      default: () => { return; }
+      default: () => {
+        return
+      }
     },
     show: {
       type: Boolean,
@@ -72,14 +57,14 @@ export default {
       this.handleMenuButton(!this.show)
     },
     handleBackButton () {
-      this.$router.back();
+      this.$router.back()
     },
     goPost () {
       this.$router.push({ path: '/post' })
     }
   }
 }
- </script>
+</script>
 
  <style lang="scss" scoped>
 .vheader {
@@ -104,10 +89,16 @@ export default {
   .right {
     flex: 1;
   }
+  i {
+    color: #fff;
+  }
+  span {
+    color: #fff;
+  }
 }
 .showAnimate {
   transform: translateX(300px);
 }
 </style>
- 
- 
+
+
