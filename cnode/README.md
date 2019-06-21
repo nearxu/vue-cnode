@@ -56,6 +56,9 @@ create axios vue
 https://zhuanlan.zhihu.com/p/28906725
 
 ### keep-alive
+a,b,c,d放到同一个嵌套的子<router-view>, 给这个<router-view>套<keep-alive>
+https://www.cnblogs.com/sysuhanyf/p/7454530.html
+
 
 根据 $route.meta.keepAlive 属性 进行 v-if 判断
 

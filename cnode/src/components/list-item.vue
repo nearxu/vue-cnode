@@ -1,7 +1,6 @@
 /*
  * @Author: nearxu
- * @Date: 2019-06-19 19:00:09 
-   @ item
+ * @Date: 2019-06-19 19:00:09
  */
 
 <template>

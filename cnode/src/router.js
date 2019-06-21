@@ -7,17 +7,22 @@ import Post from '@/pages/post'
 import Message from '@/pages/message'
 import Me from '@/pages/me'
 import Login from '@/pages/login'
+// import List from '@/pages/list'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
+      redirect: '/home'
+    },
+    {
+      path: '/home',
       name: 'Home',
       component: Home,
       meta: {
         requireAuth: false,
-        keepAlive: true // 需要被缓存
+        keepAlive: true// 需要被缓存
       }
     },
     {
@@ -50,7 +55,7 @@ export default new Router({
       component: Topic,
       meta: {
         requireAuth: false,
-        keepAlive: false // no需要被缓存
+        keepAlive: true // no需要被缓存
       }
     },
     {
@@ -60,10 +65,6 @@ export default new Router({
       meta: {
         requireAuth: false
       }
-    },
-    {
-      path: '*',
-      redirect: '/'
     }
 
   ]

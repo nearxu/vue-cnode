@@ -1,16 +1,14 @@
 
  <template>
-  <div class="head">
-    <div :class="['vheader', { showAnimate: show }]">
-      <div class="left" @click="handleBackButton">
-        <i v-show="showBackButton" class="cnode-iconfont">back</i>
-      </div>
-      <div class="center">
-        <span class="text" v-text="title"></span>
-      </div>
-      <div class="right" @click="goPost">
-        <i v-show="showPostButton" class="cnode-iconfont">post</i>
-      </div>
+  <div :class="['vheader', { showAnimate: show }]">
+    <div class="left" @click="handleBackButton">
+      <i v-show="showBackButton" class="cnode-iconfont">back</i>
+    </div>
+    <div class="center">
+      <span class="text" v-text="title"></span>
+    </div>
+    <div class="right" @click="goPost">
+      <i v-show="showPostButton" class="cnode-iconfont">post</i>
     </div>
   </div>
 </template>

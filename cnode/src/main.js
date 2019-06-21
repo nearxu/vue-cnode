@@ -7,8 +7,12 @@ import './assets/styles/common.scss'
 
 // utils
 import session from '@/server/session'
+import infiniteScroll from 'vue-infinite-scroll'
+
 
 import router from './router'
+
+Vue.use(infiniteScroll)
 
 Vue.config.productionTip = false
 

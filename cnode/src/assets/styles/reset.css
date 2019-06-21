@@ -51,6 +51,4 @@ table {
 a{
   text-decoration:none;/*自定义的*/
 }
-a:hover, a:visited, a:link, a:active {
-    color:#fff;/*自定义的*/
-}
+
